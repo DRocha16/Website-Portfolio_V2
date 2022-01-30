@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+
+  <title>Denis Rocha &#8226; Prothesis w/ Osseointegration</title>
+
+<link href="./main.3f6952e4.css" rel="stylesheet"></head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">01 : Home</a></li>
+          <li><a href="./works.html" title="">02 : Works</a></li>
+          <li><a href="./about.html" title="">03 : About me</a></li>
+          <li><a href="./contact.html" title="">04 : Contact</a></li>
+          <!--<li><a href="./components.html" title="">05 : Components</a></li>-->
+        </ul>
+
+
+          <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
+            <li><a href="./work_boneage.html" title="">001</a></li>
+            <li><a href="./work_osseo.html" title="">002</a></li>
+            <li><a href="./Works.html" title="">003</a></li>
+            <li><a href="./work_emg.html" title="" class="active">004</a></li>
+            <li><a href="./work_pet.html" title="">005</a></li>
+            <li><a href="./work_fusion.html" title="">006</a></li>
+          </ul>
+
+
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="./assets/projects/myo_armband.jpg" class="img-responsive" alt="">
+        <div class="card-container">
+          <div class="text-center">
+            <h1 class="h2">004 : Electromiography Models For Gesture Prediction </h1>
+          <!--</div>
+          <p><u>Why osseointegration?</u> Because it's a way to improve the feedback that the amputee has from the prothesis movement. Every touch on the prothesis will produce vibrations in it that will be carried to the bone, where this can be naturally sensed by the body.
+          </p>
+          <blockquote>
+            <p>"Patients with an osseointegrated limb have better physical control over – and a more intimate, emotional connection to – their prosthetic leg or arm, compared to those using a traditional socket prosthesis."</p>
+            <small class="pull-right">HSS Hospital</small>
+          </blockquote> -->
+
+        </div>
+        <h3>The data </h3>
+
+      <p>The data for this project was generated using a MYO armband, that has 8 sensors placed in the skin.
+Four classes of motion were attempted to be predicted by the produced data. The gesture classes were : rock - 0, scissors - 1, paper - 2, ok - 3.
+These data was recorded at a sampling frequency of 200 Hz, during a record time of 40ms.
+The dataset was collected from Kaggle: https://www.kaggle.com/kyr7plus/emg-4
+</p>
+
+<h3>Model Exploration </h3>
+<p>
+After the pre-processing of the data, the search for a meaningful model began.
+Three models were generated using Orange's rapid model testing GUI. With the following results:</p>
+<p>- SVM: AUC of 0.605, Precision of 0.723 months and Recall of 0.343</p>
+<p>- Neural Network: AUC of 0.995, Precision of 0.959 months and Recall of 0.959</p>
+<p>- Naive Bayes : AUC of 0.987, Precision of 0.926 months and Recall of 0.925</p>
+<p>So, the best models were the ones using Neural Networks and the ones using the Naive Bayes approach. The train dataset had 6130 labeled examples and the test dataset had 2626 unlabeled examples , a division of 70%/30%.
+</p>
+
+      </div>
+
+      <div class="col-md-8 col-md-offset-2 section-container-spacer">
+        <div class="row">
+          <div class="col-xs-12 col-md-12">
+            <img src="./assets/projects/model_emg-ed.png" class="img-responsive" alt="">
+        </div>
+      </div>
+    <!--
+      <div class="col-xs-12">
+        <img src="./assets/projects/video rsna run GIF.gif"  class="img-responsive" alt="">
+      </div>
+    -->
+
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© 2021 | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-XXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script>
+
+--> <script type="text/javascript" src="./main.70a66962.js"></script></body>
+
+</html>

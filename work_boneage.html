@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+
+  <title>Denis Rocha &#8226; RSNA Bone Age</title>
+
+<link href="./main.3f6952e4.css" rel="stylesheet"></head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">01 : Home</a></li>
+          <li><a href="./works.html" title="">02 : Works</a></li>
+          <li><a href="./about.html" title="">03 : About me</a></li>
+          <li><a href="./contact.html" title="">04 : Contact</a></li>
+          <!--<li><a href="./components.html" title="">05 : Components</a></li>-->
+        </ul>
+
+
+          <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
+            <li><a href="./work_boneage.html" title="" class="active">001</a></li>
+            <li><a href="./work_osseo.html" title="">002</a></li>
+            <li><a href="./works.html" title="">003</a></li>
+            <li><a href="./work_emg.html" title="">004</a></li>
+            <li><a href="./work_pet.html" title="">005</a></li>
+            <li><a href="./work_fusion.html" title="">006</a></li>
+          </ul>
+
+
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="./assets/projects/video rsna comprimido sem som cortado GIF.gif" class="img-responsive" alt="">
+        <div class="card-container">
+          <div class="text-center">
+            <h1 class="h2">001 : RSNA Bone Age</h1>
+          </div>
+          <p><u>Why?</u> The conventional method that a doctor has to assess one's age is to look into his bones (frequently the hand's bones) and use his memory of last diagnostics and of studied cases to give a prediction of the patient's bone age.
+It's a method based on comparation and search for specific features in x ray images, which makes this one a problem perfectly suited for be solved using Machine Learning and Image Processing methods.
+</p>
+          <blockquote>
+            <p>"Bone Age: A Handy Tool for Pediatric Providers"</p>
+            <small class="pull-right">Article by Ana L. Creo, MD; W. Frederick Schwenk, II, MD</small>
+          </blockquote>
+
+        </div>
+        <h3>Motivation</h3>
+        <p>Hence, starting this project was a way of being able to try to solve a problem related to the field of medicine, but also and principally as a way to learn about the field of machine learning by doing.</p>
+
+        <h3>Graphical User Interface & Image Processing </h3>
+
+      <p>The goal of this GUI was to be a tool to help in the process of finding the best image processing pipeline for a dataset of X-ray hand's images.
+        This work, specifically, was designed to segment and isolate the wrist bones, in order to extract meaningful features from there to feed them into a machine learning model later on.
+      </p><p>The images used were obtained from the RSNA Bone Age contest. This contest aimed to correctly identify the age of a child from an X-ray of their hand. The whole dataset can be accessed in Kaggle: https://www.kaggle.com/kmader/rsna-bone-age
+        PyQt5 and Qt Designer were used to create the GUI. All image processing methods were created using Scikit-Image Other packages such as Matplotlib, NumPy, SciPy and Pandas were also used. It was developed as an work for an image processing course.
+        This GUI was developed as an assignment for an image processing course. Several methods of image processing such as threshold filtering, contrast enhancements region-based segmentation and some created by myself were used.
+      </p>
+        <h3>Lasso Regression & Neural Networks</h3>
+
+        <p>In the image processing phase, the visual information on the images was transformed into numerical features. Various methods were used such as GLCM features, corner features (Harris Corner Detector), CENSURE features, the percentage of non black pixels and some methods created by myself.
+        Then, this dataset was used to train a model. A more classical approach was to use Lasso regression, the other approach was using a neural network (made predominantly with ReLu as activation function).
+        The accuracy of the models were:</p>
+      <p>- Lasso Regression: MAE of 23.4 months and RMSE of 37.1 months</p>
+        <p>- Neural Network: MAE of 18.7 months and RMSE of 20.5 months</p>
+      <p>These models are still work on progress and these values, whenever I learn something new useful to this I try to implement it.</p>
+
+      </div>
+
+
+
+      <div class="col-md-8 col-md-offset-2 section-container-spacer">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <img src="./assets/projects/video rsna run GIF.gif" class="img-responsive" alt="">
+            <p>Running one of the best pipelines</p>
+
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <img src="./assets/projects/gif_nn.gif" class="img-responsive" alt="">
+              <!--<p>Menphis skyline</p>-->
+          </div>
+        </div>
+      </div>
+    <!--
+      <div class="col-xs-12">
+        <img src="./assets/projects/video rsna run GIF.gif"  class="img-responsive" alt="">
+      </div>
+    -->
+
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© 2021 | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-XXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script>
+
+--> <script type="text/javascript" src="./main.70a66962.js"></script></body>
+
+</html>
